@@ -10,7 +10,7 @@
           fetch="https://bitbucket.org/" />
   <remote name="sixoreo"
            fetch="https://github.com/SiXROM-OREO/" />
-  <default revision="refs/tags/android-8.0.0_r11"
+  <default revision="refs/tags/android-8.0.0_r12"
            remote="aosp"
            sync-j="4" />
 
