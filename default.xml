@@ -59,6 +59,7 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/apps/SixSettings" name="packages_apps_SiXSettings" remote="sixoreo" revision="oreo" />
   <project path="packages/apps/SixOTA" name="packages_apps_SixOTA" remote="sixoreo" revision="oreo" />
+  <project path="packages/services/ThemeInterfacer" name="packages_apps_ThemeInterfacer" remote="sixoreo" revision="oreo" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
