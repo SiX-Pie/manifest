@@ -6,16 +6,13 @@
            review="https://android-review.googlesource.com/" />
   <remote  name="github"
            fetch="https://github.com/" />
-  <remote name="bb"
-          fetch="https://bitbucket.org/" />
-  <remote name="sixoreo"
+  <remote  name="sixoreo"
            fetch="https://github.com/SiXROM-OREO/" />
-  <default revision="refs/tags/android-8.0.0_r12"
+  <default revision="refs/tags/android-8.0.0_r17"
            remote="aosp"
            sync-j="4" />
 
-  <!-- SiX Repo's -->
-  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="sixoreo" revision="oreo" />
+  <!-- Repo's -->
   <project path="build/make" name="build" groups="pdk" remote="sixoreo" revision="oreo" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -25,24 +22,45 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
+  <project path="changelog" name="changelog" remote="sixoreo" revision="oreo" >
+    <copyfile src="Changelog.txt" dest="Changelog.txt" />
+  </project>
+
+  <!-- Private Source -->
+  <project path="manifest" name="manifest" remote="sixoreo" revision="oreo" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="sixoreo" revision="oreo" />
+  <project path="packages/apps/SixSettings" name="packages_apps_SiXSettings" remote="sixoreo" revision="oreo" />
+  <project path="vendor/six" name="vendor_six" remote="sixoreo" revision="oreo" />
+
+  <!-- Shamu Source -->
+  <project path="device/moto/shamu" name="device_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="sixoreo" revision="oreo" />
+  <project path="kernel/moto/shamu" name="kernel_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="sixoreo" revision="oreo" />
+  <project path="vendor/moto" name="proprietary_vendor_moto" remote="sixoreo" revision="oreo" />
+  <project path="vendor/shamugapps" name="vendor_shamu_gapps" remote="sixoreo" revision="oreo" />
+
+  <!-- Angler Source 
+  <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk" remote="sixoreo" revision="oreo" />
+  <project path="kernel/huawei/angler" name="kernel_huawei_angler" groups="device,angler,broadcom_pdk" remote="sixoreo" revision="oreo" />
+  <project path="vendor/huawei" name="ezio84/abc_vendor_huawei" remote="github" revision="o" /> -->
+
+  <!-- SiX Repo's -->
+  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="sixoreo" revision="oreo" />
   <project path="build/soong" name="build_soong" remote="sixoreo" revision="oreo" groups="pdk,tradefed" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   <project path="bionic" name="bionic" remote="sixoreo" revision="oreo" />
-  <project path="manifest" name="manifest" remote="sixoreo" revision="oreo" />
-  <project path="changelog" name="changelog" remote="sixoreo" revision="oreo" >
-    <copyfile src="Changelog.txt" dest="Changelog.txt" />
-  </project>
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="external/selinux" name="external_selinux" groups="pdk" remote="sixoreo" revision="oreo" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="frameworks/support" name="frameworks_support" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="frameworks/rs" name="frameworks_rs" groups="pdk" remote="sixoreo" revision="oreo" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
+  <project path="packages/apps/MonthCalendarWidget" name="packages_apps_MonthCalendarWidget" remote="sixoreo" revision="oreo" />
   <project path="packages/apps/Camera2" name="packages_apps_Camera2" remote="sixoreo" revision="oreo" />
   <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="sixoreo" revision="oreo" />
@@ -56,45 +74,42 @@
   <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/SixSettings" name="packages_apps_SiXSettings" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/SixOTA" name="packages_apps_SixOTA" remote="sixoreo" revision="oreo" />
-  <project path="packages/services/ThemeInterfacer" name="packages_apps_ThemeInterfacer" remote="sixoreo" revision="oreo" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="system/core" name="system_core" groups="pdk" remote="sixoreo" revision="oreo" />
-  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="sixoreo" revision="oreo" />
-  <project path="system/media" name="system_media" groups="pdk" remote="sixoreo" revision="oreo" />
-  <project path="system/netd" name="system_netd" groups="pdk" remote="sixoreo" revision="oreo" />
-  <project path="system/nfc" name="system_nfc" groups="pdk" remote="sixoreo" revision="oreo" />
-  <project path="system/extras" name="system_extras" groups="pdk" remote="sixoreo" revision="oreo" />
-  <project path="vendor/six" name="vendor_six" remote="sixoreo" revision="oreo" />
 
-  <!-- Shamu Source -->
-  <project path="device/moto/shamu" name="device_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="sixoreo" revision="oreo" />
-  <project path="kernel/moto/shamu" name="kernel_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="sixoreo" revision="oreo" />
-  <project path="vendor/moto" name="proprietary_vendor_moto" remote="sixoreo" revision="oreo" />
-  <project path="vendor/shamugapps" name="vendor_shamu_gapps" remote="sixoreo" revision="oreo" />
-
-  <!-- Hardware and Tools -->
+  <!-- System and Hardware -->
+  <project path="hardware/qcom/audio" name="hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="sixoreo" revision="oreo" />
   <project path="hardware/qcom/bt" name="hardware_qcom_bt" groups="qcom,pdk" remote="sixoreo" revision="oreo" />
   <project path="hardware/ril" name="hardware_ril" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="sixoreo" revision="oreo" />
+  <project path="system/bt" name="system_bt" groups="pdk" remote="sixoreo" revision="oreo" />
+  <project path="system/core" name="system_core" groups="pdk" remote="sixoreo" revision="oreo" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="sixoreo" revision="oreo" />
+  <project path="system/media" name="system_media" groups="pdk" remote="sixoreo" revision="oreo" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="sixoreo" revision="oreo" />
+  <project path="system/extras" name="system_extras" groups="pdk" remote="sixoreo" revision="oreo" />
+
+  <!-- Gcc Tools -->
   <project path="prebuilts/ninja/linux-x86" name="prebuilts_ninja_linux-x86" remote="sixoreo" revision="oreo" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.x" name="R3Ds/arm-eabi-6.x" remote="bb" revision="oreo" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="arm-eabi-4.8" remote="sixoreo" revision="oreo" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="arm-eabi-4.9" remote="sixoreo" revision="oreo" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-6.x" name="arm-eabi-6.x" remote="sixoreo" revision="oreo" />
 
   <!-- Untracked -->
-  <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" groups="apps_nfc,pdk-fs" />
-  <project path="system/bt" name="platform/system/bt" groups="pdk" />
+  <project path="libcore" name="platform/libcore" groups="pdk" />
   <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
   <project path="system/vold" name="platform/system/vold" groups="pdk" />
   <project path="packages/apps/WallpaperPicker" name="platform/packages/apps/WallpaperPicker" groups="pdk-fs" />
-  <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
+
+  <!-- NFC repos -->
+  <!--<project path="system/nfc" name="system_nfc" groups="pdk" remote="sixoreo" revision="oreo" />-->
+  <!--<project path="external/libnfc-nxp" name="external_libnfc-nxp" remote="sixoreo" revision="oreo" />-->
+  <!--<project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="sixoreo" revision="oreo" />-->
 
   <!-- AOSP Source -->
   <project path="art" name="platform/art" groups="pdk" />
@@ -365,6 +380,7 @@
   <project path="external/xmlwriter" name="platform/external/xmlwriter" groups="pdk" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" groups="pdk" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk" />
+  <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
@@ -386,7 +402,6 @@
   <project path="frameworks/opt/net/ethernet" name="platform/frameworks/opt/net/ethernet" groups="pdk-fs" />
   <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs,pdk-fs" />
@@ -400,7 +415,6 @@
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense,pdk" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt,pdk" />
-  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio,pdk" />
   <project path="hardware/qcom/bootctrl" name="platform/hardware/qcom/bootctrl" groups="pdk" />
   <project path="hardware/qcom/data/ipacfg-mgr" name="platform/hardware/qcom/data/ipacfg-mgr" groups="qcom,pdk" />
   <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="pdk,qcom,qcom_display" />
@@ -416,7 +430,6 @@
   <project path="hardware/qcom/msm8x09" name="platform/hardware/qcom/msm8x09" groups="qcom_msm8x09" />
   <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom,pdk" />
   <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan,pdk" />
-  <project path="libcore" name="platform/libcore" groups="pdk" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/CarrierConfig" name="platform/packages/apps/CarrierConfig" groups="pdk-cw-fs,pdk-fs" />
