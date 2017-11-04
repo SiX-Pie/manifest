@@ -43,6 +43,7 @@
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="external/selinux" name="external_selinux" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="external/toybox" name="external_toybox" groups="pdk" remote="sixoreo" revision="oreo" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="sixoreo" revision="oreo" />
   <project path="frameworks/support" name="frameworks_support" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
@@ -369,7 +370,6 @@
   <project path="external/vulkan-validation-layers" name="platform/external/vulkan-validation-layers" groups="pdk" />
   <project path="external/webp" name="platform/external/webp" groups="pdk,qcom_msm8x26" />
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" />
-  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" />
   <project path="external/wycheproof" name="platform/external/wycheproof" groups="pdk" />
   <project path="external/x264" name="platform/external/x264" groups="pdk" />
   <project path="external/xmlrpcpp" name="platform/external/xmlrpcpp" groups="pdk" />
