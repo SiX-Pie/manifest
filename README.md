@@ -1,6 +1,6 @@
-# Nephilim Renown #
+# Nephilim Renown
 
-# Getting Started
+Getting Started
 ---------------
 
 To build Nephilim from source, you'll need to be familiar with
@@ -8,7 +8,7 @@ To build Nephilim from source, you'll need to be familiar with
 
 To initialize your local repository, use this command:
 
-	repo init -u https://github.com/NephilimRenown/manifest.git -b oreo
+	repo init -u https://github.com/NephilimRom/manifest.git -b o81x
 
 Then to sync source, use this command:
 
@@ -27,3 +27,7 @@ After syncing is done, use these commands to build:
     or
    
     . build/envsetup.sh && brunch shamu userdebug
+
+
+# powered by S.i.X ROM #
+
