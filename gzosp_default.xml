@@ -53,6 +53,7 @@
 
   <!-- Oppo Source -->
   <project path="device/oppo/common" name="device_oppo_common" remote="nephilim2" revision="oreo" />
+  <project path="vendor/oneplus" name="vendor_oneplus" remote="nephilim2" revision="oreo" />
 
   <!-- Gcc Toolchain -->
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="arm-eabi-4.9" remote="nephilim" revision="oreo" />
