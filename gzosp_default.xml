@@ -10,18 +10,24 @@
   <remote  name="sixoreo2"
            fetch="https://github.com/SiX-ROM-OREO/" />
 
+  <remote  name="nephilim"
+           fetch="https://github.com/NephilimRenown/" />
+
+  <remote  name="nephilim2"
+           fetch="https://github.com/NephilimDevices/" />
+
   <remote  name="gzosp"
            fetch="https://github.com/GZOSP" />
 
-  <default revision="8.0"
+  <default revision="8.1"
            remote="gzosp"
            sync-f="true"
            sync-c="true"
            sync-j="8" />
 
-  <!-- SiX-ROM-OREO -->
-  <project path="manifest" name="manifest" remote="sixoreo2" revision="oreo" />
-  <project path="build/make" name="build" remote="sixoreo2" revision="oreo" >
+  <!-- GZOSP -->
+  <project path="manifest" name="manifest" remote="gzosp" />
+  <project path="build/make" name="build" remote="gzosp" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -30,74 +36,13 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="sixoreo2" revision="oreo" >
+  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="gzosp" />
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="gzosp" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="bionic" name="bionic" groups="pdk" remote="sixoreo2" revision="oreo" />
-  <project path="changelog" name="changelog" remote="sixoreo2" revision="oreo" >
-    <copyfile src="Changelog.txt" dest="Changelog.txt" />
-  </project>
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="sixoreo2" revision="oreo" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="sixoreo2" revision="oreo" />
-  <project path="packages/apps/SixSettings" name="packages_apps_SiXSettings" remote="sixoreo2" revision="oreo" />
-  <project path="packages/apps/Camera2" name="packages_apps_Camera2" groups="pdk-fs" remote="sixoreo2" revision="oreo" />
-  <project path="vendor/gzosp" name="vendor_six" remote="sixoreo2" revision="oreo" />
 
-  <!-- SiXROM-OREO -->
-  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/DocumentsUI" name="packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/Eleven" name="packages_apps_Eleven" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/ExactCalculator" name="packages_apps_ExactCalculator" groups="pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" groups="pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/OmniSwitch" name="packages_apps_OmniSwitch" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/MusicFX" name="packages_apps_MusicFX" groups="pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="sixoreo" revision="oreo" />
-  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="sixoreo" revision="oreo" />
-  <project path="external/toybox" name="external_toybox" groups="pdk" remote="sixoreo" revision="oreo" />
-  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" groups="pdk" remote="sixoreo" revision="oreo" />
-
-  <!-- Shamu Source -->
-  <project path="device/moto/shamu" name="device_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="sixoreo2" revision="oreo" />
-  <project path="kernel/moto/shamu" name="kernel_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="sixoreo2" revision="oreo" />
-
-  <!-- Angler Source -->
-  <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk" remote="sixoreo2" revision="oreo" />
-  <project path="kernel/huawei/angler" name="kernel_huawei_angler" groups="device,angler,broadcom_pdk" remote="sixoreo2" revision="oreo" />
-
-  <!-- Cheeseburger Source -->
-  <project path="device/oneplus/cheeseburger" name="device_oneplus_cheeseburger" remote="sixoreo2" revision="oreo" />
-  <project path="kernel/oneplus/msm8998" name="kernel_oneplus_msm8998" remote="sixoreo2" revision="oreo" />
-
-  <!-- Oneplus3 Source -->
-  <project path="device/oneplus/oneplus3" name="device_oneplus_oneplus3" remote="sixoreo2" revision="oreo" />
-  <project path="kernel/oneplus/msm8996" name="kernel_oneplus_msm8996" remote="sixoreo2" revision="oreo" />
-
-  <!-- Oppo Source -->
-  <project path="device/oppo/common" name="device_oppo_common" remote="sixoreo2" revision="oreo" />
-
-  <!-- Vendor Sources -->
-  <project path="vendor/moto" name="proprietary_vendor_moto" remote="sixoreo" revision="oreo" />
-  <project path="vendor/huawei" name="ezio84/abc_vendor_huawei" remote="github" revision="o" />
-  <project path="vendor/oneplus" name="BigTopKrazies/vendor_oneplus" remote="github" revision="8.0" />
-
-  <!-- Gcc Toolchain -->
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="arm-eabi-4.9" remote="sixoreo" revision="oreo" />
-
-  <!-- GZOSP -->
-  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="gzosp" />
+  <project path="bionic" name="bionic" groups="pdk" remote="gzosp" />
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="gzosp" />
   <project path="development" name="development" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="device/gzosp/sepolicy" name="device_gzosp_sepolicy" remote="gzosp" />
@@ -111,22 +56,49 @@
   <project path="external/libnfc-nxp" name="external_libnfc-nxp" remote="gzosp" />
   <project path="external/mksh" name="external_mksh" groups="pdk" remote="gzosp" />
   <project path="external/nano" name="external_nano" remote="gzosp" />
+  <project path="external/skia" name="external_skia" groups="pdk,qcom_msm8x26" remote="gzosp" />
   <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="gzosp" />
   <project path="external/selinux" name="external_selinux" groups="pdk" remote="gzosp" />
+  <project path="external/toybox" name="external_toybox" groups="pdk" remote="gzosp" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" groups="pdk" remote="gzosp" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="gzosp" />
+  <project path="frameworks/base" name="frameworks_base" remote="gzosp" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="gzosp" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="gzosp" />
   <project path="hardware/gzosp/interfaces" name="hardware_gzosp_interfaces" remote="gzosp" >
       <copyfile dest="hardware/gzosp/Android.bp" src="Android.bp"/>
   </project>
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk" remote="gzosp" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="gzosp" />
   <project path="hardware/libhardware" name="hardware_libhardware" remote="gzosp" />
   <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" groups="pdk" remote="gzosp" />
   <project path="hardware/ril" name="hardware_ril" groups="pdk" remote="gzosp" />
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
+  <project path="packages/apps/Camera2" name="packages_apps_Camera2" groups="pdk-fs" remote="gzosp" />
+  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" groups="pdk-fs" remote="gzosp" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="gzosp" />
+  <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="gzosp" />
+  <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" groups="pdk-fs" remote="gzosp" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs" remote="gzosp" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="gzosp" />
+  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="gzosp" />
+  <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="gzosp" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
+  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
   <project path="system/bt" name="system_bt" groups="pdk" remote="gzosp" />
   <project path="system/core" name="system_core" groups="pdk" remote="gzosp" />
+  <project path="system/hardware/interfaces" name="system_hardware_interfaces" groups="pdk" remote="gzosp" />
+  <project path="system/hwservicemanager" name="system_hwservicemanager" groups="pdk" remote="gzosp" />
+  <project path="system/libhidl" name="system_libhidl" groups="pdk" remote="gzosp" />
   <project path="system/media" name="system_media" groups="pdk" remote="gzosp" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="gzosp" />
   <project path="system/nfc" name="system_nfc" groups="pdk" remote="gzosp" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="gzosp" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="gzosp" />
+  <project path="vendor/gzosp" name="vendor_gzosp" remote="gzosp" />
+
 </manifest>
