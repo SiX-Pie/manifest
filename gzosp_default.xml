@@ -37,6 +37,7 @@
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
+  <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
 
   <!-- GZOSP -->
   <project path="manifest" name="manifest" remote="gzosp" />
