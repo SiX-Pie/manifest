@@ -46,6 +46,7 @@
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="nephilim" revision="oreo-810" />
+  <project path="external/busybox" name="external_busybox" remote="nephilim" revision="oreo" />
   <project path="external/toybox" name="external_toybox" groups="pdk" remote="nephilim" revision="oreo-810" />
 
   <!-- Angler Source -->
