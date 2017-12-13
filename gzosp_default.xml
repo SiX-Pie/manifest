@@ -40,6 +40,7 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   <project path="bionic" name="bionic" groups="pdk" remote="nephilim" revision="oreo-810" />
+  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="nephilim" revision="oreo-810" />
   <project path="changelog" name="changelog" remote="nephilim" revision="oreo-810" >
     <copyfile src="Changelog.txt" dest="Changelog.txt" />
   </project>
