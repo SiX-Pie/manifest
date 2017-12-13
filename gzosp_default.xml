@@ -42,6 +42,7 @@
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
+  <project path="packages/apps/MusicFX" name="packages_apps_MusicFX" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
 
   <!-- GZOSP -->
   <project path="manifest" name="manifest" remote="gzosp" />
