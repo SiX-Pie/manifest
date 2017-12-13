@@ -51,6 +51,9 @@
   <project path="kernel/moto/shamu" name="kernel_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="nephilim" revision="oreo" />
   <project path="vendor/moto" name="vendor_motorola" remote="nephilim2" revision="oreo" />
 
+  <!-- Oppo Source -->
+  <project path="device/oppo/common" name="device_oppo_common" remote="nephilim2" revision="oreo" />
+
   <!-- Gcc Toolchain -->
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="arm-eabi-4.9" remote="nephilim" revision="oreo" />
 
