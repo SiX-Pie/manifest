@@ -40,6 +40,9 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   <project path="bionic" name="bionic" groups="pdk" remote="nephilim" revision="oreo-810" />
+  <project path="changelog" name="changelog" remote="nephilim" revision="oreo-810" >
+    <copyfile src="Changelog.txt" dest="Changelog.txt" />
+  </project>
   <project path="manifest" name="manifest" remote="nephilim" revision="oreo810-caf" />
   <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
