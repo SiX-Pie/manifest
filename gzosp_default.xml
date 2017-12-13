@@ -46,6 +46,9 @@
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
 
+  <!-- Angler Source -->
+  <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk" remote="sixoreo2" revision="oreo" />
+
   <!-- Shamu Source -->
   <project path="device/moto/shamu" name="device_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="nephilim2" revision="oreo" />
   <project path="kernel/moto/shamu" name="kernel_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="nephilim" revision="oreo" />
