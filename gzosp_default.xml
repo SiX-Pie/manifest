@@ -46,6 +46,9 @@
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
 
+  <!-- Gcc Toolchain -->
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="arm-eabi-4.9" remote="nephilim" revision="oreo" />
+
   <!-- GZOSP -->
   <project path="manifest" name="manifest" remote="gzosp" />
   <project path="build/make" name="build" remote="gzosp" >
