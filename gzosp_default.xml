@@ -49,6 +49,7 @@
   <!-- Angler Source -->
   <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk" remote="sixoreo2" revision="oreo" />
   <project path="kernel/huawei/angler" name="kernel_huawei_angler" groups="device,angler,broadcom_pdk" remote="sixoreo2" revision="oreo" />
+  <project path="vendor/huawei" name="ezio84/abc_vendor_huawei" remote="github" revision="o" />
 
   <!-- Shamu Source -->
   <project path="device/moto/shamu" name="device_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="nephilim2" revision="oreo" />
