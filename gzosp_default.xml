@@ -51,6 +51,9 @@
   <project path="kernel/moto/shamu" name="kernel_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="nephilim" revision="oreo" />
   <project path="vendor/moto" name="vendor_motorola" remote="nephilim2" revision="oreo" />
 
+  <!-- Cheeseburger Source -->
+  <project path="device/oneplus/cheeseburger" name="device_oneplus_cheeseburger" remote="nephilim2" revision="oreo" />
+
   <!-- Oppo Source -->
   <project path="device/oppo/common" name="device_oppo_common" remote="nephilim2" revision="oreo" />
   <project path="vendor/oneplus" name="vendor_oneplus" remote="nephilim2" revision="oreo" />
