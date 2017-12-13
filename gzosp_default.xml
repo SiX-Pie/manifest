@@ -31,6 +31,7 @@
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Eleven" name="packages_apps_Eleven" remote="nephilim" revision="oreo-810" />
+  <project path="packages/apps/ExactCalculator" name="packages_apps_ExactCalculator" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
 
   <!-- GZOSP -->
   <project path="manifest" name="manifest" remote="gzosp" />
