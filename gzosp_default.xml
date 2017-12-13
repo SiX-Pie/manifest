@@ -28,6 +28,7 @@
   <!-- SiXROM-OREO -->
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
 
   <!-- GZOSP -->
   <project path="manifest" name="manifest" remote="gzosp" />
