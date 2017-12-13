@@ -54,6 +54,7 @@
   <project path="external/busybox" name="external_busybox" remote="nephilim" revision="oreo" />
   <project path="external/toybox" name="external_toybox" groups="pdk" remote="nephilim" revision="oreo-810" />
   <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" groups="pdk" remote="nephilim" revision="oreo-810" />
+  <project path="vendor/gzosp" name="vendor_nephilim" remote="nephilim" revision="oreo-caf" />
 
   <!-- Angler Source -->
   <project path="device/huawei/angler" name="device_huawei_angler" groups="device,angler,broadcom_pdk" remote="sixoreo2" revision="oreo" />
@@ -137,6 +138,5 @@
   <project path="system/netd" name="system_netd" groups="pdk" remote="gzosp" />
   <project path="system/nfc" name="system_nfc" groups="pdk" remote="gzosp" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="gzosp" />
-  <project path="vendor/gzosp" name="vendor_gzosp" remote="gzosp" />
 
 </manifest>
