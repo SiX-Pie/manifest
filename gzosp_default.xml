@@ -26,6 +26,7 @@
            sync-j="8" />
 
   <!-- SiXROM-OREO -->
+  <project path="manifest" name="manifest" remote="nephilim" revision="oreo810-caf" />
   <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
@@ -79,7 +80,7 @@
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="arm-eabi-4.9" remote="nephilim" revision="oreo" />
 
   <!-- GZOSP -->
-  <project path="manifest" name="manifest" remote="gzosp" />
+
   <project path="build/make" name="build" remote="gzosp" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
