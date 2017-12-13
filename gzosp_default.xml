@@ -29,6 +29,7 @@
   <project path="manifest" name="manifest" remote="nephilim" revision="oreo810-caf" />
   <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
+  <project path="packages/apps/Camera2" name="packages_apps_Camera2" groups="pdk-fs" remote="nephilim" revision="oreo-caf" />
   <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
@@ -124,7 +125,6 @@
   <project path="hardware/libhardware" name="hardware_libhardware" remote="gzosp" />
   <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" groups="pdk" remote="gzosp" />
   <project path="hardware/ril" name="hardware_ril" groups="pdk" remote="gzosp" />
-  <project path="packages/apps/Camera2" name="packages_apps_Camera2" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="gzosp" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="gzosp" />
