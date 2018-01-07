@@ -10,7 +10,7 @@ To build Nephilim from source, you'll need to be familiar with
 
 To initialize your local repository, use this command:
 
-	repo init -u https://github.com/NephilimRenown/manifest.git -b oreo810-caf
+	repo init -u https://github.com/NephilimRom/manifest.git -b o81x-caf
 
 Then to sync source, use this command:
 
