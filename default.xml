@@ -17,8 +17,7 @@
            remote="aosp"
            sync-j="4" />
 
-  <!-- Nephilim Repo's -->
-  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="nephilim" revision="oreo-810" />
+  <!-- Main Repo's -->
   <project path="build/make" name="build" remote="nephilimrom" revision="o81x" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -37,10 +36,23 @@
     <copyfile src="Changelog.txt" dest="Changelog.txt" />
   </project>
   <project path="manifest" name="manifest" remote="nephilimrom" revision="o81x" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="nephilimrom" revision="o81x" />
+  <project path="packages/apps/DUI" name="packages_apps_DUI" remote="nephilimrom" revision="o81x" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="nephilimrom" revision="o81x" />
+  <project path="packages/apps/SixSettings" name="packages_apps_NephilimSettings" remote="nephilimrom" revision="o81x" />
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="nephilim" revision="oreo-810" />
+  <project path="vendor/six" name="vendor_nephilim" remote="nephilimrom" revision="o81x" />
+
+  <!-- Shamu Source -->
+  <project path="device/moto/shamu" name="device_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="nephilimrom" revision="o81x" />
+  <project path="kernel/moto/shamu" name="kernel_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="nephilimrom" revision="o81x" />
+  <project path="vendor/moto" name="proprietary_vendor_moto" remote="nephilimrom" revision="o81x" />
+
+  <!-- Nephilim Repo's -->
+  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="nephilim" revision="oreo-810" />
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="nephilim" revision="oreo-810" />
   <project path="external/DUtils" name="external_DUtils" remote="nephilim" revision="oreo-810" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="nephilim" revision="oreo-810" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="nephilimrom" revision="o81x" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="nephilim" revision="oreo-810" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="nephilim" revision="oreo-810" />
   <project path="frameworks/rs" name="frameworks_rs" groups="pdk" remote="nephilim" revision="oreo-810" />
@@ -51,19 +63,15 @@
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/DocumentsUI" name="packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
-  <project path="packages/apps/DUI" name="packages_apps_DUI" remote="nephilim" revision="oreo-810" />
-  <!-- <project path="packages/apps/Eleven" name="packages_apps_Eleven" remote="nephilim" revision="oreo-810" /> -->
   <project path="packages/apps/ExactCalculator" name="packages_apps_ExactCalculator" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/MusicFX" name="packages_apps_MusicFX" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="nephilimrom" revision="o81x" />
-  <project path="packages/apps/SixSettings" name="packages_apps_NephilimSettings" remote="nephilimrom" revision="o81x" />
   <project path="packages/apps/OmniSwitch" name="packages_apps_OmniSwitch" remote="nephilim" revision="oreo-810" />
-  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="nephilim" revision="oreo-810" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="nephilim" revision="oreo-810" />
@@ -79,17 +87,13 @@
   <project path="system/core" name="system_core" groups="pdk" remote="nephilim" revision="oreo-810" />
   <project path="system/extras" name="system_extras" groups="pdk" remote="nephilim" revision="oreo-810" />
   <project path="system/media" name="system_media" groups="pdk" remote="nephilim" revision="oreo-810" />
-  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="nephilim" revision="oreo-810" />
-  <project path="vendor/six" name="vendor_nephilim" remote="nephilimrom" revision="o81x" />
-
-  <!-- Shamu Source -->
-  <project path="device/moto/shamu" name="device_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="nephilimrom" revision="o81x" />
-  <project path="kernel/moto/shamu" name="kernel_moto_shamu" groups="device,shamu,broadcom_pdk,generic_fs,pdk" remote="nephilimrom" revision="o81x" />
-  <project path="vendor/moto" name="proprietary_vendor_moto" remote="nephilimrom" revision="o81x" />
-
-  <!-- NFC Source -->
   <project path="system/nfc" name="system_nfc" groups="pdk" remote="nephilim" revision="oreo-810" />
-  <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="nephilim" revision="oreo-810" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="nephilim" revision="oreo-810" />
+
+  <!-- Gcc and External -->
+  <project path="external/busybox" name="external_busybox" remote="nephilim" revision="oreo" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="arm-eabi-4.8" remote="nephilim" revision="oreo" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="arm-eabi-4.9" remote="nephilim" revision="oreo" />
 
   <!-- Temp Untrack -->
   <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
@@ -97,12 +101,6 @@
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom,pdk" />
   <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="prebuilts/jdk/jdk8" name="platform/prebuilts/jdk/jdk8" groups="pdk" clone-depth="1" />
-  <!-- <project path="external/libnfc-nxp" name="external_libnfc-nxp" remote="nephilim" revision="oreo-810" /> -->
-
-  <!-- Gcc and External -->
-  <project path="external/busybox" name="external_busybox" remote="nephilim" revision="oreo" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="arm-eabi-4.8" remote="nephilim" revision="oreo" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" name="arm-eabi-4.9" remote="nephilim" revision="oreo" />
 
   <!-- AOSP Repo's -->
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
