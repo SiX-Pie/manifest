@@ -40,7 +40,7 @@
   <project path="packages/apps/DUI" name="packages_apps_DUI" remote="nephilimrom" revision="o81x" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="nephilimrom" revision="o81x" />
   <project path="packages/apps/SixSettings" name="packages_apps_NephilimSettings" remote="nephilimrom" revision="o81x" />
-  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="nephilim" revision="oreo-810" />
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="nephilimrom" revision="o81x" />
   <project path="vendor/six" name="vendor_nephilim" remote="nephilimrom" revision="o81x" />
 
   <!-- Shamu Source -->
